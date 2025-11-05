@@ -1,0 +1,464 @@
+[
+  {
+    "objectID": "course.html",
+    "href": "course.html",
+    "title": "Outline and schedule",
+    "section": "",
+    "text": "Course description at Physalia Courses"
+  },
+  {
+    "objectID": "course.html#day-1",
+    "href": "course.html#day-1",
+    "title": "Outline and schedule",
+    "section": "Day 1",
+    "text": "Day 1\nSetup and background\nFirst steps"
+  },
+  {
+    "objectID": "course.html#day-2",
+    "href": "course.html#day-2",
+    "title": "Outline and schedule",
+    "section": "Day 2",
+    "text": "Day 2\nAssistants, examples, exercises"
+  },
+  {
+    "objectID": "background.html#background",
+    "href": "background.html#background",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Background",
+    "text": "Background\nLanguage Models? \n\nLarge Language Models? \n\n\nGenerative AI?"
+  },
+  {
+    "objectID": "background.html#section",
+    "href": "background.html#section",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "AI-generated image created with DALL·E via ChatGPT\n\n\n\n\nAfter drinking some water, the dog went back to the bed to feed her ___________."
+  },
+  {
+    "objectID": "background.html#token-probabilities",
+    "href": "background.html#token-probabilities",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Token probabilities",
+    "text": "Token probabilities\nLet’s use promptr to explore the probabilistic nature of LLMs (and check if our OpenAI key is set up correctly)\n\n\nlibrary(promptr)\npromptr::complete_prompt(\"After drinking some water, the dog went to bed feed her\")\n\n - Let’s change the prompt and the max_tokens argument"
+  },
+  {
+    "objectID": "background.html#demo",
+    "href": "background.html#demo",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Demo",
+    "text": "Demo\nToken Possibilities app by Garrick Aiden Buie"
+  },
+  {
+    "objectID": "background.html#section-1",
+    "href": "background.html#section-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "Language models\nPredict and generate text by estimating the probability of tokens occurring in a given sequence.\n\nLarge language models\nAdd more parameters and massive datasets, enabling more complex tasks\n\nTokens\nBasic units of text that LLMs use to process language. May be words, character sets, combinations of words, and punctuation."
+  },
+  {
+    "objectID": "background.html#section-2",
+    "href": "background.html#section-2",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "Jim Amos on linkedin:\n\nLLMs are language calculators: they use Natural Language Processing algorithms to intepret prompts then generate statistically plausible answers rendered from algebraic vectors – afterimages of training data compressed into non-euclidian space…\n\n\n\nstatistically plausible can be good enough for what we need"
+  },
+  {
+    "objectID": "background.html#llms-can-help-us-with",
+    "href": "background.html#llms-can-help-us-with",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs can help us with:",
+    "text": "LLMs can help us with:\n\nText generation, translation, sentiment analysis, writing and debugging code, generating images and videos, etc."
+  },
+  {
+    "objectID": "background.html#lets-consider",
+    "href": "background.html#lets-consider",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Let’s consider:",
+    "text": "Let’s consider:\n\nGrowing evidence of negative effects on learning\nBiases\nHype\nValid anti-AI sentiment\nIssues with training material\nProvider intentions\nLax security"
+  },
+  {
+    "objectID": "background.html#hype",
+    "href": "background.html#hype",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "🚫 Hype 🚫",
+    "text": "🚫 Hype 🚫\n\n\n\n\n“If you don’t become an AI/prompt engineer by tomorrow you’re a loser with no future”\n “Your product needs AI or it will be worthless”\n “All your training in data and coding was a waste of time”"
+  },
+  {
+    "objectID": "background.html#still",
+    "href": "background.html#still",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Still…",
+    "text": "Still…\n\nI believe everyone deserves the ability to automate tedious tasks in their lives with computers - Simon Willison\n\n\n..providing a way for people to talk with machines in plain language constitutes a dramatic step forward in making computing accessible to everyone - Carl Bergstrom (paraphrased)"
+  },
+  {
+    "objectID": "background.html#where-are-the-models-who-makes-them",
+    "href": "background.html#where-are-the-models-who-makes-them",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Where are the models? Who makes them?",
+    "text": "Where are the models? Who makes them?\nMany popular models live on the cloud\n\nOpenAI (Known for GPT series including ChatGPT)\nGoogle AI (Gemini models)\nAnthropic (Claude models)\nDeepSeek (DeepSeek R1)\nGitHub Copilot (multiple models)"
+  },
+  {
+    "objectID": "background.html#models-providers",
+    "href": "background.html#models-providers",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Models != Providers",
+    "text": "Models != Providers\nCompanies train and release models for different use cases\n\nGeneral purpose, lightweight models, coding, etc.\nModels may be open or proprietary\nCloud providers may host multiple models from different makers\nWeb-based chats include models + various tools (which are not necessarily evident)"
+  },
+  {
+    "objectID": "background.html#lets-explore",
+    "href": "background.html#lets-explore",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Let’s explore",
+    "text": "Let’s explore\n\n\nModels supported by Continue\nLLM leaderboard"
+  },
+  {
+    "objectID": "background.html#cloud-hosted-models",
+    "href": "background.html#cloud-hosted-models",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Cloud-Hosted models",
+    "text": "Cloud-Hosted models\n\n\n\nRelatively easy setup\nCreate account, set up billing if applicable, get an API key\nAccess to new and in-development models and massive computing power\n\n\n\n\n\nCan be costly\nNeed internet access\nWe send our data to the API"
+  },
+  {
+    "objectID": "background.html#local-models",
+    "href": "background.html#local-models",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Local models",
+    "text": "Local models\nDownload smaller models on our own hardware\n\n\n\nData not shared with a provider\nNo ongoing costs\nWork offline\n\n\n\n\n\nSteep learning curve\nLarge memory requirements\nSlower performance\n\n\n\nExamples:\nOllama (Simplifies running open-source LLMs locally)\nHugging Face transformers (lots of open-source models)"
+  },
+  {
+    "objectID": "background.html#which-model-do-i-use",
+    "href": "background.html#which-model-do-i-use",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Which model do I use?",
+    "text": "Which model do I use?\nConsiderations\n\n\n\nPricing\nFree tiers, token pricing, billing policies\nContext Windows\nCompatibility with our chosen tools\nSpeed\n\n\n\nPerformance\nPrivacy\nHardware"
+  },
+  {
+    "objectID": "background.html#on-pricing",
+    "href": "background.html#on-pricing",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "On pricing",
+    "text": "On pricing\n\nNothing is more costly than something given free of charge\n- Japanese proverb.\n\n\n\nnothing is offered for free unless there is something to be gained for the party involved\nif we are not paying for the product, then we are the product"
+  },
+  {
+    "objectID": "background.html#decent-enough-outputs",
+    "href": "background.html#decent-enough-outputs",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Decent enough outputs",
+    "text": "Decent enough outputs\n\nWorking code -&gt; actual problems solved & time saved\nUpdated and more recent knowledge cut-offs"
+  },
+  {
+    "objectID": "background.html#explosion-of-programs-packages-and-features-since-late-2024",
+    "href": "background.html#explosion-of-programs-packages-and-features-since-late-2024",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Explosion of programs, packages and features since late 2024",
+    "text": "Explosion of programs, packages and features since late 2024\n\nRelevant keynotes, blog posts, demos, workshops\n💡R + AI conference happening next week!"
+  },
+  {
+    "objectID": "background.html#cut-down-on-context-switching",
+    "href": "background.html#cut-down-on-context-switching",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Cut down on context switching",
+    "text": "Cut down on context switching\n\nGrowing support in R for AI tools\n\nShifting our attention between different tasks or programs can be tiring and make us less productive and efficient.\n\nAsk the chatbot in the browser\nCopy the response and paste it in R\nShare the errors or output with the chat\nRepeat (and potentially introduce errors)"
+  },
+  {
+    "objectID": "background.html#coding-with-llms",
+    "href": "background.html#coding-with-llms",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Coding with LLMs",
+    "text": "Coding with LLMs\n\nAutocomplete\n\n\nModels suggest ‘ghost text’ as we type\n\nVery distracting during teaching\n\nSuggestions may be unhelpful but mostly harmless"
+  },
+  {
+    "objectID": "background.html#coding-with-llms-1",
+    "href": "background.html#coding-with-llms-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Coding with LLMs",
+    "text": "Coding with LLMs\n\nChats\n\n\nSend prompts, get answers\nOften let us provide context and upload files\nResults can be copied or inserted directly to a script\nIn the browser or through APIs"
+  },
+  {
+    "objectID": "background.html#coding-with-llms-2",
+    "href": "background.html#coding-with-llms-2",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Coding with LLMs",
+    "text": "Coding with LLMs\n\nAgents/Agentic\n\nCan run code and change files\nFollow a general plan and iterates\nWorks on a task ‘autonomously’\nToken-hungry and potentially slow\nMakes us assume that results are correct\nGame-changing potential"
+  },
+  {
+    "objectID": "background.html#questions-we-might-put-in-an-llm-chat-window",
+    "href": "background.html#questions-we-might-put-in-an-llm-chat-window",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Questions we might put in an LLM chat window?",
+    "text": "Questions we might put in an LLM chat window?\n\n\n&gt; How do I add a subtitle to my ggplot figure?\n&gt; What are the arguments for pivot_wider()?\n&gt; I can’t join my table_1 object with my dat3 data frame, help!\n\n\n\nNote the difference in the type of question. This will be important soon."
+  },
+  {
+    "objectID": "background.html#request-response-cycle",
+    "href": "background.html#request-response-cycle",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Request-response cycle",
+    "text": "Request-response cycle\nDifferent parts of the internet communicate through HTTP requests. This includes interacting with LLMs.\n\nWeb searches\nFile downloads\nPosting a status on social media"
+  },
+  {
+    "objectID": "background.html#section-3",
+    "href": "background.html#section-3",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "Role\nDescription\n\n\n\n\nsystem_prompt\nOverarching instructions from that define the behavior of the assistant\n\n\nuser\nMessages from the user interactingwith the model\n\n\nassistant\nThe model’s responses to the user"
+  },
+  {
+    "objectID": "background.html#conversation-with-a-chatbot",
+    "href": "background.html#conversation-with-a-chatbot",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Conversation with a chatbot",
+    "text": "Conversation with a chatbot\n 🧍: name three mammals  🤖: dog, cat, mouse \n\n🧍: name three mammals  🤖: perro, gato, ratón\n\n  What happened?"
+  },
+  {
+    "objectID": "background.html#system-prompts",
+    "href": "background.html#system-prompts",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "System Prompts",
+    "text": "System Prompts\nDefine specific instructions on role, tone, or constraints\n\nNo system prompt?\n\nModels default to base programming, leads to general and less predictable responses"
+  },
+  {
+    "objectID": "background.html#system-prompts-1",
+    "href": "background.html#system-prompts-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "System Prompts",
+    "text": "System Prompts\nRepeatable, consistent results suited to what we need to do.\n\n“you are an expert R programmer that only uses base R”\n“you are an expert R programmer that only uses base R. Do not add any comments. Do not explain the output”\n“you are an expert R programmer. Comment the code in French”\n\n\n\nellmer prompt design Vignette"
+  },
+  {
+    "objectID": "background.html#llms-are-stateless",
+    "href": "background.html#llms-are-stateless",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs are stateless",
+    "text": "LLMs are stateless"
+  },
+  {
+    "objectID": "background.html#llms-are-stateless-1",
+    "href": "background.html#llms-are-stateless-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs are stateless",
+    "text": "LLMs are stateless\n\nLLMs don’t retain memory of prior interactions\nContext happens by sending all previous messages with each new request\nBecause of limitations on tokens and context size, there are truncation and optimization strategies at work"
+  },
+  {
+    "objectID": "background.html#llms-are-stateless-2",
+    "href": "background.html#llms-are-stateless-2",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "LLMs are stateless",
+    "text": "LLMs are stateless\n\n\nStart new chats often\nSplit up tasks across chats\nUse detailed system prompts"
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Course Materials",
+    "section": "",
+    "text": "gander demo script"
+  },
+  {
+    "objectID": "materials.html#data-and-scripts",
+    "href": "materials.html#data-and-scripts",
+    "title": "Course Materials",
+    "section": "",
+    "text": "gander demo script"
+  },
+  {
+    "objectID": "materials.html#slide-decks",
+    "href": "materials.html#slide-decks",
+    "title": "Course Materials",
+    "section": "Slide decks",
+    "text": "Slide decks\n\nDay 1\nSetup and Intros\nMore about LLMs\nHands-on"
+  },
+  {
+    "objectID": "setup.html#hello",
+    "href": "setup.html#hello",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Hello!",
+    "text": "Hello!\n\n\n\n @LuisDVA\n liomys.mx\n luis@liomys.mx\n\n\n\nMammals, macroecology, conservation\nR user since 2011 / ‘blogger’ since 2015\nCertified Instructor - Posit(RStudio) & The Carpentries\n\nOnline and in-person courses all year (Physalia Courses, Estación R, R for the Rest of Us)\nrOpenSci mentor 2023-2026\nPackage developer\nR conference speaker + organizer\nR-Ladies collaborator (St. Louis 🇺🇸; Buenos Aires 🇦🇷; Gaborone 😃 🇧🇼)"
+  },
+  {
+    "objectID": "setup.html#online-guide",
+    "href": "setup.html#online-guide",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Online Guide",
+    "text": "Online Guide\n-Tools, packages, and extensions for working with LLMs + R - English and Spanish, updated 2x/month\n\nhome"
+  },
+  {
+    "objectID": "setup.html#more-introductions",
+    "href": "setup.html#more-introductions",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "🤝 More introductions",
+    "text": "🤝 More introductions\n\nAre you an AI {skeptic | hater | enthusiast | pragmatist} ? \nHave you been pleasantly surprised/impressed by an AI tool? \nHave you been disappointed or burned by an AI tool?"
+  },
+  {
+    "objectID": "setup.html#projects",
+    "href": "setup.html#projects",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Projects",
+    "text": "Projects"
+  },
+  {
+    "objectID": "setup.html#project-oriented-workflow",
+    "href": "setup.html#project-oriented-workflow",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Project-oriented workflow",
+    "text": "Project-oriented workflow\nProject: A folder on your computer that holds all the files relevant to a particular piece of work. We usually separate:\n📁 Data\n📁 Scripts\n📁 Outputs\n\n\n\n\n\nJenny Bryan (2017)\nProject-oriented workflow\n\nMaëlle Salmon (2021)\nDraw me a project"
+  },
+  {
+    "objectID": "setup.html#projects-1",
+    "href": "setup.html#projects-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Projects",
+    "text": "Projects\n\nEfficient and organized workflows\nRelative file paths and working directories\nSafer and cheaper approach when using AI assistants"
+  },
+  {
+    "objectID": "setup.html#ides",
+    "href": "setup.html#ides",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "IDEs",
+    "text": "IDEs\n\n\nRStudio\n\nFamiliar and trusted\nAI tools available (fewer GUI options)\nNot going anywhere\n\n\nPositron\n\nExtensible\nBuilt-in LLM tools\nConstant development\nAlternatives available"
+  },
+  {
+    "objectID": "setup.html#positron-1",
+    "href": "setup.html#positron-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Positron?",
+    "text": "Positron?\nPositron for RStudio Users: A Gentle Introduction\nIsabella Velazquez - Oct. 2025\n\nVideo\nSlides"
+  },
+  {
+    "objectID": "setup.html#section",
+    "href": "setup.html#section",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "We’ll use cloud-based models for this course. More on this later."
+  },
+  {
+    "objectID": "setup.html#application-programming-interfaces",
+    "href": "setup.html#application-programming-interfaces",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Application Programming Interfaces",
+    "text": "Application Programming Interfaces\n\n\n\n\n\nAI-generated image created with DALL·E 3 via Bing Image Generator\n\n\n\n\nThe rules and protocols that determine how one application can request data from another.\nLet different software systems talk to each other and exchange data without having to understand each others’ inner workings."
+  },
+  {
+    "objectID": "setup.html#apis",
+    "href": "setup.html#apis",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "APIs",
+    "text": "APIs\nAllow applications (R scripts, browser-based prompts, mobile apps) to:\n\nSend input text (prompts)\nReceive generated text, code, or structured data back\nHandle authentication (e.g., using API keys)"
+  },
+  {
+    "objectID": "setup.html#api-keys",
+    "href": "setup.html#api-keys",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "API Keys",
+    "text": "API Keys\nWorking with APIs means we need to identify ourselves to the model provider and authenticate our encrypted connection to their servers\n\nOverall workflow\n\nCreate and account with a model provider\n💳 ?\nGenerate an API key\nKeep it safe but reachable by your LLM tools"
+  },
+  {
+    "objectID": "setup.html#section-1",
+    "href": "setup.html#section-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "In R\nMost packages work with keys stored in Environment Variables.\nIn GUI-based assistants\nWe enter our keys interactively\n\n⚠️ Never share API keys in public repositories, network drives, shared documents or screen recordings.\n\n\n\n\nH. Wickham  Managing secrets\n\nTed Laderas  A gRadual introduction to web APIs and JSON"
+  },
+  {
+    "objectID": "setup.html#api-key-setup",
+    "href": "setup.html#api-key-setup",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "API key setup",
+    "text": "API key setup\nWe’ll provide keys for two popular providers. These will only be active during the course hours.\nR\nTemporary: Sys.setenv(OPENAI_API_KEY = api_key)\nPermament: usethis::edit_r_environ()"
+  },
+  {
+    "objectID": "hands-on.html#context-aware-help",
+    "href": "hands-on.html#context-aware-help",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Context-Aware Help",
+    "text": "Context-Aware Help\nTrying to help someone over the phone vs. helping someone at the computer\n\nYoung Thug and Lil Durk Troubleshooting meme - imgflip"
+  },
+  {
+    "objectID": "hands-on.html#contex-aware-help",
+    "href": "hands-on.html#contex-aware-help",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Contex-Aware Help",
+    "text": "Contex-Aware Help\n\nAsk the chatbot in the browser IDE\nCopy Apply the response and paste it in R\nShare the errors or output with the chat\nRepeat (and potentially introduce errors)"
+  },
+  {
+    "objectID": "hands-on.html#ellmer-and-friends",
+    "href": "hands-on.html#ellmer-and-friends",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "ellmer and friends",
+    "text": "ellmer and friends\n\nBridging R and LLMs\n\nRobust and designed specifically for easy interaction with LLMs directly from R\nBroad provider support and meant for entreprise/production use\nAllows models to extend their capabilities by executing R code"
+  },
+  {
+    "objectID": "hands-on.html#ellmer-and-friends-1",
+    "href": "hands-on.html#ellmer-and-friends-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "ellmer and friends",
+    "text": "ellmer and friends\n\nBridging R and LLMs\n\nCan produce output that is immediately usable in R\nLeverages the btw package to ‘see’ the R session\nStrong dev team"
+  },
+  {
+    "objectID": "hands-on.html#gander",
+    "href": "hands-on.html#gander",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "gander",
+    "text": "gander\n\n\n\n\n\nMore than a simple chat window\nPowered by ellmer\nRStudio & Positron\n\n\ngander receives a snapshot of our environment with every request and recognizes what we are talking about, including object and variable names"
+  },
+  {
+    "objectID": "hands-on.html#gander-demo",
+    "href": "hands-on.html#gander-demo",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "gander demo",
+    "text": "gander demo\nWe use ellmer to specify which model powers the addin (and optionally set a system prompt).\nToday we can use openAI or Anthropic models.\n\nuse with ctr+alt+G\n\nganderDemo.R\nSetup instructions for Positron here"
+  },
+  {
+    "objectID": "hands-on.html#ellmer-demo",
+    "href": "hands-on.html#ellmer-demo",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "ellmer demo",
+    "text": "ellmer demo\n\nlibrary(ellmer)\nmy_chat &lt;- chat_openai() \nmy_chat\n\n Chat with the model then look at your chat object again\n Create a new chat object with a different model and system prompt"
+  },
+  {
+    "objectID": "hands-on.html#interacting-with-the-chat-object",
+    "href": "hands-on.html#interacting-with-the-chat-object",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Interacting with the chat object",
+    "text": "Interacting with the chat object\nWithout leaving R:\n\n\n\nIn the R console\nlive_console(my_chat)\n\nIn our web browser\nlive_browser(my_chat)"
+  },
+  {
+    "objectID": "hands-on.html#positron-vscode-extensions",
+    "href": "hands-on.html#positron-vscode-extensions",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Positron (vsCode) extensions",
+    "text": "Positron (vsCode) extensions\nInstall from the OpenVSX marketplace from the Extensions pane\n\n\nPositron Assistant\n\nContinue\n\nRoo Code\n\nWindsurf"
+  },
+  {
+    "objectID": "hands-on.html#continue-continue.dev",
+    "href": "hands-on.html#continue-continue.dev",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Continue continue.dev",
+    "text": "Continue continue.dev\n\n“Ship faster with Continuous AI”\n\nCool IDE features:\n\nChat\nAutocomplete\nContext Items\nAgent mode\nPlanning mode"
+  },
+  {
+    "objectID": "hands-on.html#windsurf-windsurf.com",
+    "href": "hands-on.html#windsurf-windsurf.com",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Windsurf windsurf.com",
+    "text": "Windsurf windsurf.com\n\nformerly Codeium\n\n\nthe most intuitive AI coding experience, built to keep you—and your team—in flow\n\nCool IDE features:\n\nChat\nAutocomplete\nContext Items\nBase model included with free tier is Meta’s Llama 3.1 70B."
+  },
+  {
+    "objectID": "hands-on.html#roo-code-roocode.com",
+    "href": "hands-on.html#roo-code-roocode.com",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Roo Code roocode.com",
+    "text": "Roo Code roocode.com\n\nThe AI dev team that gets things done\n\nCool IDE features:\n\nChat\nContext Items\nMultiple customizable ‘personas’ (agent, debugger, coder, code architect, etc)\nShows model details"
+  },
+  {
+    "objectID": "hands-on.html#positron-assistant",
+    "href": "hands-on.html#positron-assistant",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Positron Assistant",
+    "text": "Positron Assistant\n\nComes with recent versions of Positron\nHighly integrated\nMeant for R and Python\nLimited models supported at present\n👀"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Website",
+    "section": "",
+    "text": "Integrating Large Language Model tools to our R workflows\nAll slides and materials live here.\nThis site will be updated after each day during the course to correct any issues or add themes or interesting topics that came up during the sessions.\nInstructor: Luis D. Verde Arregoitia\n📆   5 & 12 November, 2025\n⏰   13:00-18:00 (Berlin Time)"
+  }
+]
