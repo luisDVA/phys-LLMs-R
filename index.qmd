@@ -7,7 +7,7 @@ toc: false
 
 All slides and materials live here.
 
-This site will be updated after each day during the course to correct any issues or add themes or interesting topics that came up during the sessions.
+This site will be updated after each day during the course to correct any issues, or to add link or interesting topics that came up during the sessions.
 
 
 Instructor: Luis D. Verde Arregoitia  
