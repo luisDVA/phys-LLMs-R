@@ -46,7 +46,7 @@
     "href": "background.html#demo",
     "title": "Integrating Large Language Model tools to our R workflows",
     "section": "Demo",
-    "text": "Demo\nToken Possibilities app by Garrick Aiden Buie"
+    "text": "Demo\nToken Possibilities app by Garrick Aiden Buie\nCode to run the app locally on your machine can be found here"
   },
   {
     "objectID": "background.html#section-1",
@@ -200,7 +200,7 @@
     "href": "background.html#section-3",
     "title": "Integrating Large Language Model tools to our R workflows",
     "section": "",
-    "text": "Role\nDescription\n\n\n\n\nsystem_prompt\nOverarching instructions from that define the behavior of the assistant\n\n\nuser\nMessages from the user interactingwith the model\n\n\nassistant\nThe model’s responses to the user"
+    "text": "Role\nDescription\n\n\n\n\nsystem_prompt\nOverarching instructions from the user that define the behavior of the assistant\n\n\nuser\nMessages from the user interactingwith the model\n\n\nassistant\nThe model’s responses to the user"
   },
   {
     "objectID": "background.html#conversation-with-a-chatbot",
@@ -361,7 +361,7 @@
     "href": "setup.html#api-key-setup",
     "title": "Integrating Large Language Model tools to our R workflows",
     "section": "API key setup",
-    "text": "API key setup\nWe’ll provide keys for two popular providers. These will only be active during the course hours.\nR\nTemporary: Sys.setenv(OPENAI_API_KEY = api_key)\nPermament: usethis::edit_r_environ()"
+    "text": "API key setup\nWe’ll provide keys for two popular providers. These will only be active during the course hours.\nR\nTemporary: Sys.setenv(OPENAI_API_KEY = \"api_key\") (quoted)\nPermanent: usethis::edit_r_environ()"
   },
   {
     "objectID": "hands-on.html#context-aware-help",

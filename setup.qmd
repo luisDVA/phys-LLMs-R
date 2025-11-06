@@ -193,8 +193,8 @@ We'll provide keys for two popular providers. These will only be active during t
 
 ### R
 
-Temporary: `Sys.setenv(OPENAI_API_KEY = api_key)`
+Temporary: `Sys.setenv(OPENAI_API_KEY = "api_key")` (quoted)
 
-Permament: `usethis::edit_r_environ()`
+Permanent: `usethis::edit_r_environ()`
 
 # Break
