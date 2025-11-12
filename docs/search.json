@@ -249,21 +249,21 @@
     "href": "materials.html",
     "title": "Course Materials",
     "section": "",
-    "text": "gander demo script"
+    "text": "gander demo script\nSession 2 files"
   },
   {
     "objectID": "materials.html#data-and-scripts",
     "href": "materials.html#data-and-scripts",
     "title": "Course Materials",
     "section": "",
-    "text": "gander demo script"
+    "text": "gander demo script\nSession 2 files"
   },
   {
     "objectID": "materials.html#slide-decks",
     "href": "materials.html#slide-decks",
     "title": "Course Materials",
     "section": "Slide decks",
-    "text": "Slide decks\n\nDay 1\nSetup and Intros\nMore about LLMs\nHands-on"
+    "text": "Slide decks\n\nDay 1\nSetup and Intros\nMore about LLMs\nHands-on\n\n\nDay 2\nExtensions and more"
   },
   {
     "objectID": "setup.html#hello",
@@ -460,5 +460,166 @@
     "title": "Course Website",
     "section": "",
     "text": "Integrating Large Language Model tools to our R workflows\nAll slides and materials live here.\nThis site will be updated after each day during the course to correct any issues, or to add links or interesting topics that came up during the sessions.\nInstructor: Luis D. Verde Arregoitia\n📆   5 & 12 November, 2025\n⏰   13:00-18:00 (Berlin Time)"
+  },
+  {
+    "objectID": "extensions.html#check-installations-configure-keys",
+    "href": "extensions.html#check-installations-configure-keys",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Check installations, configure keys 🔑",
+    "text": "Check installations, configure keys 🔑\n\n\nPositron Assistant\n\nRoo Code\n- Windsurf\n- Continue"
+  },
+  {
+    "objectID": "extensions.html#rstudio-sidebar-sidekick",
+    "href": "extensions.html#rstudio-sidebar-sidekick",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "RStudio Sidebar + side::kick() 🎛️",
+    "text": "RStudio Sidebar + side::kick() 🎛️\n\nRStudio Sidebar (a new full-height pane for RStudio), available as of last week\nside package\nInstall a daily RStudio build from &lt; 1 week ago. Enable sidebar using the command palette, run side::kick()"
+  },
+  {
+    "objectID": "extensions.html#write-documentation",
+    "href": "extensions.html#write-documentation",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Write documentation",
+    "text": "Write documentation\n\nWrite roxygen2 documentation for the function in randompenguins.R  or \nWrite comments or prose explaining what the code does"
+  },
+  {
+    "objectID": "extensions.html#quarto",
+    "href": "extensions.html#quarto",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Quarto?",
+    "text": "Quarto?\nAn open source technical publishing system\n\nMulti-format (PDF, HTML, .docx)\nExecution of embedded code\nMulti-output (books, blogs, reports, presentations)"
+  },
+  {
+    "objectID": "extensions.html#dog-presentation-and-report",
+    "href": "extensions.html#dog-presentation-and-report",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Dog presentation and report",
+    "text": "Dog presentation and report\nLet’s use Roo Code for this\nHave an LLM read this website and create a brief presentation (three or four slides)\n\nThe URL: https://www.assistancedogs.org.au/news/eleven-reasons-why-labradors-are-good-assistance-dogs/"
+  },
+  {
+    "objectID": "extensions.html#presentation-exercise",
+    "href": "extensions.html#presentation-exercise",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Presentation exercise",
+    "text": "Presentation exercise\nUse LLMs to accomplish the following:\n\nCreate a css class with colors and text styling\nApply the class using Quarto fenced divs"
+  },
+  {
+    "objectID": "extensions.html#report",
+    "href": "extensions.html#report",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Report",
+    "text": "Report\n\nUse the .qmd file from the presentation to instead render an HTML report"
+  },
+  {
+    "objectID": "extensions.html#multiple-inputs-to-usable-r-objects",
+    "href": "extensions.html#multiple-inputs-to-usable-r-objects",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Multiple inputs to usable R objects",
+    "text": "Multiple inputs to usable R objects\n🐘 ellmer\n\nCreate chat object\nDefine scheme using a ‘type’ object\nRun chat_structured"
+  },
+  {
+    "objectID": "extensions.html#messy-tabular-data",
+    "href": "extensions.html#messy-tabular-data",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "2. Messy tabular data",
+    "text": "2. Messy tabular data\nSend requests in parallel to work with vectors\n\nvisitorbook.tsv\n\nparallelchat.R"
+  },
+  {
+    "objectID": "extensions.html#biographical-information",
+    "href": "extensions.html#biographical-information",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "1. Biographical information",
+    "text": "1. Biographical information\n\nCreate text string with biographical information\nDesired schema using type_object\nUse chat_structured method"
+  },
+  {
+    "objectID": "extensions.html#section",
+    "href": "extensions.html#section",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "library(ellmer)\nchatbio &lt;- chat_openai(model = \"gpt-5-nano\", system_prompt = \"extract info\")\n\nbio_text &lt;- \"Gonzalo Pineda Reyes (born October 19, 1982) is a Mexican professional football manager and former player. Pineda played as a defensive midfielder for several clubs in Mexico, and also represented Mexico internationally. He last played in 2015 for the Seattle Sounders FC. He became assistant coach of the Sounders beginning with the 2017 season. \"\n\nbio_type &lt;- type_object(\n  name=type_string(\"First initial and last name\"),\n  sport=type_string(\"Sport played and professional leagues, separate with colon\"),\n  ctry=type_string(\"Country of origin\")\n)"
+  },
+  {
+    "objectID": "extensions.html#ocr-extract",
+    "href": "extensions.html#ocr-extract",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "3. OCR + extract",
+    "text": "3. OCR + extract\nBat PDF demo\nModel comparison and features here\n\n\n\nextractPDFdemo.R\nstenoderma.PDF"
+  },
+  {
+    "objectID": "extensions.html#create-documentation-for-an-analytical-workflow",
+    "href": "extensions.html#create-documentation-for-an-analytical-workflow",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Create documentation for an analytical workflow",
+    "text": "Create documentation for an analytical workflow\nLet’s write a wiki for the data and code associated with:\nRoost selection by male northern long-eared bats (Myotis septentrionalis) in a managed fire-adapted forest by Alston et al.(2019)\n\nalston2019.zip\n\n\nUse ‘architect’ mode"
+  },
+  {
+    "objectID": "extensions.html#writing-documentation",
+    "href": "extensions.html#writing-documentation",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Writing documentation",
+    "text": "Writing documentation\n\nWith Positron Assistant (or Gander)\n\n\nWrite roxygen2 documentation for the function in randompenguins.R\n\n\nor\n\n\nWrite comments or prose explaining what the code does"
+  },
+  {
+    "objectID": "extensions.html#context-awareness",
+    "href": "extensions.html#context-awareness",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Context awareness",
+    "text": "Context awareness\nCreate these objects in your workspace, ask how to join them to keep all rows from df1 and matching rows from df2\n\nlibrary(tibble)\ndf1 &lt;- tibble(id = 1:5)\ndf2 &lt;- tibble(identifier = c(1, 1, 2), y = c(\"first\", \"second\", \"third\"))"
+  },
+  {
+    "objectID": "extensions.html#section-1",
+    "href": "extensions.html#section-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "$name\n[1] \"G. Pineda\"\n\n$sport\n[1] \"Football: Liga MX, MLS\"\n\n$ctry\n[1] \"Mexico\""
+  },
+  {
+    "objectID": "extensions.html#vision",
+    "href": "extensions.html#vision",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "4. Vision 🔭",
+    "text": "4. Vision 🔭\n\n\n\n\nImages can also be tokenized. Encode with content_image_* functions.\n\n\nchatImg &lt;- chat_openai(\"gpt-4.1-nano\")\nchatImg$chat(\n  content_image_url(\"https://www.surfdogchampionships.com/wp-content/uploads/2019/08/i-Wg3VMHr-L.jpg\"),\n  \"What is in this photo? be brief (1 sentence)\"\n)"
+  },
+  {
+    "objectID": "extensions.html#vision-output",
+    "href": "extensions.html#vision-output",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "4. Vision 🔭",
+    "text": "4. Vision 🔭\n\nThe photo shows two dogs wearing orange life jackets surfing on a board in the \nwater."
+  },
+  {
+    "objectID": "extensions.html#section-2",
+    "href": "extensions.html#section-2",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "ggbot2\nmyownrobs\n\ncursor IDE\n\nLotas IDE offerings\n\nPositron databot for EDA (experimental)"
+  },
+  {
+    "objectID": "extensions.html#relevant-updates",
+    "href": "extensions.html#relevant-updates",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Relevant updates 📰",
+    "text": "Relevant updates 📰\n\nChanges to the SWE-bench (SoftWare Engineering evaluation) leaderboard\nRStudio Sidebar\nR + AI conference happening today\nAI + RStudio tutorial as part of LatinR, December 2nd."
+  },
+  {
+    "objectID": "extensions.html#relevant-updates-1",
+    "href": "extensions.html#relevant-updates-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Relevant updates",
+    "text": "Relevant updates\n\nChanges to the SWE-bench (SoftWare Engineering evaluation) leaderboard\nRStudio Sidebar\nR + AI conference happening today\nAI + RStudio tutorial as part of LatinR, December 2nd. ## RStudio Sidebar + side::kick() 🎛️"
+  },
+  {
+    "objectID": "extensions.html#check-installations-configure-keys-1",
+    "href": "extensions.html#check-installations-configure-keys-1",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "Check installations, configure keys",
+    "text": "Check installations, configure keys\n\n\nPositron Assistant\n\nRoo Code\n- Windsurf\n- Continue"
+  },
+  {
+    "objectID": "extensions.html",
+    "href": "extensions.html",
+    "title": "Integrating Large Language Model tools to our R workflows",
+    "section": "",
+    "text": "Changes to the SWE-bench (SoftWare Engineering evaluation) leaderboard\nRStudio Sidebar\nR + AI conference happening today\nAI + RStudio tutorial as part of LatinR, December 2nd.\n\n\n\n\n\nRStudio Sidebar (a new full-height pane for RStudio), available as of last week\nside package\nInstall a daily RStudio build from &lt; 1 week ago. Enable sidebar using the command palette, run side::kick()"
   }
 ]

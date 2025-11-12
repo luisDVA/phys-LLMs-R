@@ -4,7 +4,11 @@ title: "Course Materials"
 
 ## Data and scripts
 
-[[gander demo script](ganderDemo.R)]{style="font-size: 1.6rem; background-color: #ff835a; 	padding: 3px;	border-radius: 6px; text-align: center;"}
+[[gander demo script](ganderDemo.R)]{style="font-size: 1.1rem; background-color: #ff835a; 	padding: 3px;	border-radius: 6px; text-align: center;"}
+
+
+[[Session 2 files](session2files.zip)]{style="font-size: 1.2rem; background-color: #fff0f3; padding: 1px;	border-radius: 6px; text-align: center;"}
+
 
 ## Slide decks
 
@@ -15,4 +19,12 @@ title: "Course Materials"
 [More about LLMs](background.qmd){.external target="_blank"}
 
 [Hands-on](hands-on.qmd){.external target="_blank"}
+
+
+### Day 2
+
+[Extensions and more](extensions.qmd){.external target="_blank"}
+
+
+
 

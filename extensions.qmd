@@ -1,0 +1,224 @@
+---
+title: "Integrating Large Language Model tools to our R workflows"
+subtitle: "Physalia Courses"
+date: "November 12 2025"
+author: "Luis D. Verde Arregoitia"
+format:
+  revealjs:
+    slide-number: true
+    theme: slides2.scss
+editor: visual
+---
+
+# Questions from last session?
+
+## Relevant updates 📰
+
+- Changes to the SWE-bench (SoftWare Engineering evaluation)  [leaderboard](https://scale.com/leaderboard/swe_bench_pro_public)
+
+- RStudio Sidebar
+
+- R + AI conference happening today
+
+- AI + RStudio [tutorial](https://www.eventbrite.cl/e/coding-with-ai-in-rstudio-tickets-1962817615325?aff=oddtdtcreator) as part of LatinR, December 2nd.
+
+## RStudio Sidebar + side::kick() 🎛️
+
+
+- RStudio Sidebar (a new full-height pane for RStudio), available as of last week
+
+- [side](https://github.com/simonpcouch/side) package
+
+- Install a daily RStudio build from < 1 week ago. Enable sidebar using the command palette, run `side::kick()`
+
+# Extensions 🧩
+
+## Check installations, configure keys 🔑
+
+:::{large-slide-text}
+- Positron Assistant  
+- Roo Code  
+~~- Windsurf~~  
+~~- Continue~~  
+:::
+
+# Creating and editing code
+
+## Writing documentation {background="#fff0f3"} 
+
+> With Positron Assistant (or Gander)
+
+a) Write roxygen2 documentation for the function in `randompenguins.R` 
+
+<br/>
+
+_or_
+
+<br/>
+
+b) Write comments or prose explaining what the code does
+
+## Context awareness
+
+Create these objects in your workspace, ask how to join them to keep all rows from df1 and matching rows from df2
+
+```{r}
+#| echo: true
+#| eval: false
+library(tibble)
+df1 <- tibble(id = 1:5)
+df2 <- tibble(identifier = c(1, 1, 2), y = c("first", "second", "third"))
+```
+
+
+# Authoring Quarto Documents
+
+## Quarto?
+
+### An open source technical publishing system
+
+- Multi-format (PDF, HTML, .docx)
+- Execution of embedded code
+- Multi-output (books, blogs, reports, presentations)
+
+## Dog presentation and report
+
+### Let's use Roo Code for this
+
+Have an LLM read this [website](https://www.assistancedogs.org.au/news/eleven-reasons-why-labradors-are-good-assistance-dogs/) and create a brief presentation (three or four slides)
+
+<br/>
+
+The URL: https://www.assistancedogs.org.au/news/eleven-reasons-why-labradors-are-good-assistance-dogs/
+
+## Presentation exercise {background="#fff0f3"} 
+
+### Use LLMs to accomplish the following:
+
+- Create a css class with colors and text styling
+- Apply the class using Quarto fenced divs
+
+## Report
+
+- Use the .qmd file from the presentation to instead render an HTML report
+
+# Extracting structured data
+
+## Multiple inputs to usable R objects
+
+### 🐘 `ellmer`
+
+- Create chat object
+- Define scheme using a 'type' object
+- Run `chat_structured` 
+
+
+## 1. Biographical information
+
+- Create text string with biographical information
+
+- Desired schema using `type_object`
+
+- Use `chat_structured` method
+
+## 
+
+```{r}
+#| eval: true
+#| echo: true
+
+library(ellmer)
+chatbio <- chat_openai(model = "gpt-5-nano", system_prompt = "extract info")
+
+bio_text <- "Gonzalo Pineda Reyes (born October 19, 1982) is a Mexican professional football manager and former player. Pineda played as a defensive midfielder for several clubs in Mexico, and also represented Mexico internationally. He last played in 2015 for the Seattle Sounders FC. He became assistant coach of the Sounders beginning with the 2017 season. "
+
+bio_type <- type_object(
+  name=type_string("First initial and last name"),
+  sport=type_string("Sport played and professional leagues, separate with colon"),
+  ctry=type_string("Country of origin")
+)
+
+```
+
+##
+
+```{r}
+chatbio$chat_structured(type=bio_type,bio_text)
+```
+
+## 2. Messy tabular data
+
+Send requests in parallel to work with vectors  
+
+- visitorbook.tsv  
+- `parallelchat.R`
+
+## 3. OCR + extract
+
+### Bat PDF demo 
+
+Model comparison and features [here](https://posit-conf-2025.github.io/llm/slides/slides-04.html#/model-comparison)
+
+::: columns
+::: {.column width="50%"}
+- `extractPDFdemo.R`
+- stenoderma.PDF
+:::
+
+::: {.column width="50%"}
+![](https://inaturalist-open-data.s3.amazonaws.com/photos/674270/medium.jpg){width="40%"}
+:::
+:::
+
+## 4. Vision 🔭
+
+::: columns
+::: {.column width="50%"}
+![](https://www.surfdogchampionships.com/wp-content/uploads/2019/08/i-Wg3VMHr-L.jpg){width="53%"}
+:::
+
+::: {.column width="50%"}
+
+Images can also be tokenized. Encode with `content_image_*` functions.
+:::
+:::
+
+
+```{r}
+#| echo: true
+#| eval: true
+#| output-location: slide
+
+chatImg <- chat_openai("gpt-4.1-nano")
+chatImg$chat(
+  content_image_url("https://www.surfdogchampionships.com/wp-content/uploads/2019/08/i-Wg3VMHr-L.jpg"),
+  "What is in this photo? be brief (1 sentence)"
+)
+```
+
+# Reproducibility
+
+## Create documentation for an analytical workflow
+
+Let's write a wiki for the [data and code](https://zenodo.org/records/2727206) associated with:
+
+_Roost selection by male northern long-eared bats (Myotis septentrionalis) in a managed fire-adapted forest_ by Alston et al.([2019](Roost selection by male northern long-eared bats (Myotis septentrionalis) in a managed fire-adapted forest))
+
+
+- `alston2019.zip`
+
+> Use 'architect' mode
+
+# Additional tools and features to try later
+
+## 
+
+<br/><br/>
+
+- [ggbot2](https://github.com/tidyverse/ggbot2) 
+- [myownrobs](https://myownrobs.github.io/myownrobs/)  
+- cursor IDE  
+- [Lotas](https://www.lotas.ai/) IDE offerings  
+- Positron [databot](https://positron.posit.co/databot.html) for EDA (experimental)
+
+# 👋 Thanks!

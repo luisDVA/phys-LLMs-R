@@ -23,4 +23,9 @@ x <- c(23,34,14,77,40,7,8)
 my_vec <- c(100,200,111,130,120)
 dogs <- c("Mila","Chloe","Lady","Daisy")
 
+install.packages("readODS")
+library(readODS)
+library(readxl)
 
+read_excel() 
+read_ods()

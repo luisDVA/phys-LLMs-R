@@ -1,13 +1,16 @@
 # this code draws on a post by Dr. Chris Brown at UTAS
 # https://www.seascapemodels.org/rstats/2025/03/15/LMs-in-R-with-ellmer.html
 
-library(ellmer)
-library(purrr)
+library(ellmer) # [github::tidyverse/ellmer] v0.3.2.9000
+library(purrr)  # CRAN v1.1.0
 
-chatdemo <- chat_google_gemini(system_prompt = "an assistant that can extract structured data from scientific papers")
+# 
+
+chatpdfs <- chat_openai(model = "gpt-4.1-mini",
+  system_prompt = "extract data from scientific papers")
   
-mybatfile <- content_pdf_file("macrotus.pdf")
-mybatfile2 <- content_pdf_file("stenoderma.pdf")
+# Prepare and encode PDF for chat input
+mybatfile <- content_pdf_file("session2files/stenoderma.pdf")
 
 of_interest <- 
   type_object(
@@ -19,18 +22,6 @@ of_interest <-
   body_mass =  type_number("weight in grams for the species")
 )
 
-
-bat_info <- chatdemo$chat_structured(mybatfile2, type= of_interest)
+bat_info <- chatpdfs$chat_structured(mybatfile, type= of_interest)
 bat_info
 
-chatdemo$chat("how to clear the chat context?")
-get_measurements <- function(filepath,chat){
-  chatdemo$chat_structured(content_pdf_file(filepath), type= of_interest) |> as.data.frame()
-}
-
-
-chatdemo$last_turn()
-
-out <- purrr::map(c("stenoderma.pdf","macrotus.pdf"),get_measurements)
-out
-list_rbind(out)
